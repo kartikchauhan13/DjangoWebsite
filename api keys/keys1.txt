@@ -1,8 +1,0 @@
-recaptcha keys 
-
-site = 6Lert8UfAAAAAFv8JbYh5ROyxAFEkGGci-Eoz1-D
-secret = 6Lert8UfAAAAAIlqkwu-YctkPvYnifmxmUGgqGao
-
-google keys
-
-key 1 = AIzaSyCiq0yQ5sN4u381-PYym546AkJGGMKuenE
