@@ -3,8 +3,14 @@ import datetime
 from django.shortcuts import render
 
 def home(request):
-    #return HttpResponse("<h1>this is index</h1>")
-    isActive=True
+    date=datetime.datetime.now()
+    active=True
+    if request.method=='POST':
+        val=request.POST.get('input')
+        print(val)
+        if val is None:
+            active=False
+
     name='jerry'
     favFoods=['icecream','dry fishfood snacks','chicken gravy']
     data={
@@ -14,7 +20,9 @@ def home(request):
             'wood':'ball',
             'rubber':'stick',
             'cotton':'teddy',
-        }
+        },
+        'active':active,
+        'date':date,
 
     }
 

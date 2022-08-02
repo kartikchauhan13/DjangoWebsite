@@ -7,16 +7,29 @@
     <title>home page </title>
 </head>
 <body>
+    <h1>Today's date is {{date}}</h1>
+
     {%  include 'nav.html' %}
     <h1>{{name}} the cat</h1>
     <hr>
-    {% if isActive %}
-    {%for food in foods %}
-    <p>{{food}}</p>
+    <form action="/home/" method='POST'>
+        {% csrf_token %}
+        <input type="checkbox" name="input" value="True" >
+        <button>send</button>
+    </form>
+    {% if active %}
+    <div>
+
+    <p>{{foods}}</p>
+    
+    {% for f in toys %}
+    <h3>{{f}}</h3>
     {% endfor %}
-    {% endif %}
 
     
+
+    </div>
+    {% endif %}
 
 </body>
 </html>
